@@ -1,3 +1,5 @@
+package twitter;
+
 
 import javax.swing.JOptionPane;
 import twitter.Metodos;
@@ -33,7 +35,7 @@ public class Twitter {
                     Metodos.lineaTiempo();
                     break;
                 case 3:
-                    Metodos.buscarTwit(JOptionPane.showInputDialog("Introduce el hastag"));
+                    Metodos.buscarTwitt(JOptionPane.showInputDialog("Introduce el hastag"));
                     break;
             }
 

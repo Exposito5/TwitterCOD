@@ -35,7 +35,9 @@ public class Metodos {
     public Metodos() {
 
     }
-
+/**
+ * Metodo para acceder a la API
+ */
     public static void conexion() {
 
         cb = new ConfigurationBuilder();
@@ -47,7 +49,9 @@ public class Metodos {
         TwitterFactory tf = new TwitterFactory(cb.build());
         twitter = tf.getInstance();
     }
-
+/**
+ * Metodo que obtiene la linea del tiempo
+ */
     public static void lineaTiempo() {
 
         List<Status> statuses;
@@ -65,7 +69,11 @@ public class Metodos {
         }
 
     }
-
+/**
+ * Metodo que postea un Twitt
+ * 
+ * @param latestStatus mensaje del nuevo twitt
+ */
     public static void twittear(String latestStatus) {
         try {
             status = twitter.updateStatus(latestStatus);
@@ -75,8 +83,12 @@ public class Metodos {
         }
 
     }
-    
-    public static void buscarTwit(String busqueda) {
+    /**
+     * Metodo que busca el twitt
+     * 
+     * @param busqueda texto para buscar el twitt
+     */
+    public static void buscarTwitt(String busqueda) {
 
         Query query = new Query(busqueda);
         QueryResult result;
